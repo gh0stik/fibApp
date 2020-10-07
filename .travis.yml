@@ -9,7 +9,7 @@ install:
  - docker build -t nginx ./nginx
 
 #Login to docker CLI
- - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password_stdin
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password_stdin
 
 #Push images to Docker hun
 
