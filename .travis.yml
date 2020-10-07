@@ -4,17 +4,17 @@ services:
  - docker
 
 install:
- - docker build -t flask ./flask
- - docker build -t worker ./worker
- - docker build -t nginx ./nginx
+ - docker build -t gh0stik/flask ./flask
+ - docker build -t gh0stik/worker ./worker
+ - docker build -t gh0stik/nginx ./nginx
 
 # Login to docker CLI
  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 
 #Push images to Docker hun
 
- - docker push flask
- - docker push worker
- - docker push nginx
+ - docker push gh0stik/flask
+ - docker push gh0stik/worker
+ - docker push gh0stik/nginx
 
 
