@@ -8,7 +8,7 @@ install:
  - docker build -t worker ./worker
  - docker build -t nginx ./nginx
 
-#Login to docker CLI
+# Login to docker CLI
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password_stdin
 
 #Push images to Docker hun
