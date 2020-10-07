@@ -7,6 +7,7 @@ install:
  - docker build -t flask ./flask
  - docker build -t worker ./worker
  - docker build -t nginx ./nginx
+ - apt install pass
 
 # Login to docker CLI
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password_stdin
