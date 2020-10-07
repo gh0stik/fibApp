@@ -1,0 +1,20 @@
+language: generic
+sudo: required
+services:
+ - docker
+
+install:
+ - docker build -t flask ./flask
+ - docker build -t worker ./worker
+ - docker build -t nginx ./nginx
+
+#Login to docker CLI
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password_stdin
+
+#Push images to Docker hun
+
+ - docker push flask
+ - docker push worker
+ - docker push nginx
+
+
