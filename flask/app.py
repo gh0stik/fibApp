@@ -41,4 +41,4 @@ def post_value():
     return render_template('index.html', answer=int(r.hget("index", value)))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
