@@ -17,4 +17,14 @@ install:
  - docker push gh0stik/worker
  - docker push gh0stik/nginx
 
-
+deploy:
+ provider: elasticbeanstalk
+ region: "eu-central-1"
+ app: "fibApp"
+ env: "Fibapp-env"
+ bucket_name: "elasticbeanstalk-eu-central-1-544397098000"
+ bucket_path: "fibApp"
+ on:
+  branch: main
+ access_key_id: $AWS_ACCESS_KEY
+ secret_access_key: "$AWS_SECRET_KEY"
